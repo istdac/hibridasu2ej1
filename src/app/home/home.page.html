@@ -1,20 +1,48 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Galería de imagenes </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-slides pager="true">
+      <ion-slide>
+        <ion-card>
+          <img src="https://picsum.photos/id/1016/300" />
+          <ion-card-header>
+            <ion-card-title>Foto 1</ion-card-title>
+            <ion-card-content>
+              blandit cursus risus at ultrices mi tempus imperdiet nulla
+              malesuada
+            </ion-card-content>
+          </ion-card-header>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card>
+          <img src="https://picsum.photos/id/1026/300" />
+          <ion-card-header>
+            <ion-card-title>Foto 2</ion-card-title>
+            <ion-card-content>
+              blandit cursus risus at ultrices mi tempus imperdiet nulla
+              malesuada
+            </ion-card-content>
+          </ion-card-header>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card>
+          <img src="https://picsum.photos/id/126/300" />
+          <ion-card-header>
+            <ion-card-title>Foto 3</ion-card-title>
+            <ion-card-content>
+              blandit cursus risus at ultrices mi tempus imperdiet nulla
+              malesuada
+            </ion-card-content>
+          </ion-card-header>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
   </div>
 </ion-content>
