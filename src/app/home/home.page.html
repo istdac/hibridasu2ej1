@@ -7,39 +7,12 @@
 <ion-content [fullscreen]="true">
   <div id="container">
     <ion-slides pager="true">
-      <ion-slide>
+      <ion-slide *ngFor="let photo of photos">
         <ion-card>
-          <img src="https://picsum.photos/id/1016/300" />
+          <img [src]="photo.url" />
           <ion-card-header>
-            <ion-card-title>Foto 1</ion-card-title>
-            <ion-card-content>
-              blandit cursus risus at ultrices mi tempus imperdiet nulla
-              malesuada
-            </ion-card-content>
-          </ion-card-header>
-        </ion-card>
-      </ion-slide>
-      <ion-slide>
-        <ion-card>
-          <img src="https://picsum.photos/id/1026/300" />
-          <ion-card-header>
-            <ion-card-title>Foto 2</ion-card-title>
-            <ion-card-content>
-              blandit cursus risus at ultrices mi tempus imperdiet nulla
-              malesuada
-            </ion-card-content>
-          </ion-card-header>
-        </ion-card>
-      </ion-slide>
-      <ion-slide>
-        <ion-card>
-          <img src="https://picsum.photos/id/126/300" />
-          <ion-card-header>
-            <ion-card-title>Foto 3</ion-card-title>
-            <ion-card-content>
-              blandit cursus risus at ultrices mi tempus imperdiet nulla
-              malesuada
-            </ion-card-content>
+            <ion-card-title>{{photo.name}}</ion-card-title>
+            <ion-card-content>{{photo.description}}</ion-card-content>
           </ion-card-header>
         </ion-card>
       </ion-slide>
