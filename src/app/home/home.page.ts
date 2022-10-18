@@ -6,10 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
-
-  constructor() {
-
+  //Crear atributo para tareas
+  public tasks:string[];
+  //Conectarse al servicio al entrar al homepage
+  //Tener que importar servicio como parametro para poder manejarlo
+  //Al instanciar el taskservice se corre su constructor
+  constructor(private taskService:TasksService) {
+    this.tasks=this.taskService.getTasks();
   }
 
 }
