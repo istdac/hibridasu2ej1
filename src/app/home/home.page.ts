@@ -31,9 +31,16 @@ export class HomePage {
     console.log(this.tasks);
     //Borrar input
     this.task=""
-    /*Tarea: UX, que con un enter guarde la tarea
-      Tarea: Que ponga el focus en el input tras agregar tarea */
     
+    
+  }/*Tarea: UX, que con un enter guarde la tarea
+      Tarea: Que ponga el focus en el input tras agregar tarea 
+      
+      Borrar task*/
+  public removeTask(pos:number){
+    this.taskService.deleteTask(pos);
+    //Actualizar arreglo
+    this.tasks=this.taskService.getTasks();
   }
   /*Controlador completo, para visualizar lista se maneja en html */
 }

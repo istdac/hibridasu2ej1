@@ -7,20 +7,19 @@
 <ion-content [fullscreen]="true">
   <!--Crear estructura, como tabla-->
   <ion-row>
-    <ion-col size-lg="11" size-xs="6"><!--Que de un tamaño de pantalla grande tome 11 columnas de largo-->
+    <ion-col size-lg="11" size-xs="6"
+      ><!--Que de un tamaño de pantalla grande tome 11 columnas de largo-->
       <ion-item>
-              <ion-label position="floating">
-        Nueva Tarea
-      </ion-label>
-      <!--Hacer que controlador reconozca lo que tenemos en el input y alterarlo-->
-      <ion-input [(ngModel)]="task"></ion-input>
+        <ion-label position="floating"> Nueva Tarea </ion-label>
+        <!--Hacer que controlador reconozca lo que tenemos en el input y alterarlo-->
+        <ion-input [(ngModel)]="task"></ion-input>
       </ion-item>
     </ion-col>
     <ion-col size-lg="1" size-xs="6">
       <!--Hacer que boton tome espacio que contiene y hacer que solamente muestre si input tiene algo-->
       <!--Eventos quitan la palabra on, se ponen en paréntesis y son iguales a los de js declarar método en home.page.ts-->
       <ion-button expand="block" *ngIf="task" (click)="addTask()">
-          <ion-icon name="add"></ion-icon>
+        <ion-icon name="add"></ion-icon>
       </ion-button>
     </ion-col>
   </ion-row>
