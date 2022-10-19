@@ -33,5 +33,7 @@ export class HomePage {
     this.task=""
     /*Tarea: UX, que con un enter guarde la tarea
       Tarea: Que ponga el focus en el input tras agregar tarea */
+    
   }
+  /*Controlador completo, para visualizar lista se maneja en html */
 }

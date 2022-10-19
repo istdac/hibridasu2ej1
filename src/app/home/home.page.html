@@ -24,4 +24,19 @@
       </ion-button>
     </ion-col>
   </ion-row>
+  <!--Añadir row para visualizar tareas
+      Usar ion-list para visualizar las tareas
+  -->
+  <ion-row>
+    <ion-col>
+      <ion-list>
+        <!--Dos partes
+          1:Consulta general (for en ion item) *ngFor="let item of tasks;"
+          2:-->
+        <ion-item *ngFor="let item of tasks ">
+          <ion-label>{{item}} </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
 </ion-content>
