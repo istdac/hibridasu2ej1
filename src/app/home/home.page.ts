@@ -18,4 +18,20 @@ export class HomePage {
     this.task="algo";
   }
 
+  //Crear método para añadir tareas
+  //Como task es publico y enlaado al input, no se requiere de parámetro
+  public addTask(){
+    //Hacer uso de servicio para añadir la tarea
+    /*Declarar un atributo y recibir con parametro*/
+    this.taskService.addTask(this.task);
+    //Actualizar arreglo local
+    //Usar servicio
+    this.tasks=this.taskService.getTasks();
+    //Comprobar
+    console.log(this.tasks);
+    //Borrar input
+    this.task=""
+    /*Tarea: UX, que con un enter guarde la tarea
+      Tarea: Que ponga el focus en el input tras agregar tarea */
+  }
 }
